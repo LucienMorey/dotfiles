@@ -24,3 +24,6 @@
     ~/.bashrc: bashrc
     ~/.tmux.conf: tmux.conf
     ~/.zshrc: zshrc
+    ~/.config/nvim:
+      create: true
+      path: nvim
