@@ -16,6 +16,7 @@
     stdin: true
     stdout: true
     stderr: true
+  # this needs to be tested properly
   - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # link dotfiles
@@ -23,4 +24,3 @@
     ~/.bashrc: bashrc
     ~/.tmux.conf: tmux.conf
     ~/.zshrc: zshrc
-    
