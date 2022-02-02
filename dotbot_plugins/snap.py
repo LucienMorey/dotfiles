@@ -15,13 +15,34 @@ class Snap(dotbot.Plugin):
         success = True
 
         for app in data:
-            try:
-                subprocess.run(
+            if 'app' in app:
+                print('thinks there is an app field')
+                if 'classic' in app and app['classic'] is True:
+                    print('thinks there is a classic field')
+                    try:
+                        print('snap install ' + app['app'] + ' --classic')
+                        subprocess.run(
+                        ['snap install ' + app['app'] + ' --classic'], 
+                        shell=True, 
+                        check=True)
+                    except subprocess.CalledProcessError:
+                         success = False
+                else:
+                    try:
+                        subprocess.run(
                         ['snap install ' + app], 
                         shell=True, 
                         check=True)
-            except subprocess.CalledProcessError:
-                success = False
+                    except subprocess.CalledProcessError:
+                        success = False 
+            else:
+                try:
+                    subprocess.run(
+                        ['snap install ' + app], 
+                        shell=True, 
+                        check=True)
+                except subprocess.CalledProcessError:
+                    success = False
 
         if success:
             self._log.info('All packages have been installed')

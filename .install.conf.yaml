@@ -41,5 +41,9 @@
 
 - snap:
   - spotify
-  - code
-  - slack
+  - 
+    app: code
+    classic: True
+  - 
+    app: slack
+    classic: True
