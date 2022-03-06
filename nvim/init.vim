@@ -37,5 +37,6 @@
 " endif
 :nmap ; :
 "use ; instead of : for commands
+inoremap jk <esc>
 
 
