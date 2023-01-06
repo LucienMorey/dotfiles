@@ -16,11 +16,8 @@ class Snap(dotbot.Plugin):
 
         for app in data:
             if 'app' in app:
-                print('thinks there is an app field')
                 if 'classic' in app and app['classic'] is True:
-                    print('thinks there is a classic field')
                     try:
-                        print('snap install ' + app['app'] + ' --classic')
                         subprocess.run(
                         ['snap install ' + app['app'] + ' --classic'], 
                         shell=True, 
