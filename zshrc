@@ -104,8 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # argcomplete for ros2 & colcon
-eval "$(register-python-argcomplete3 ros2)"
-eval "$(register-python-argcomplete3 colcon)"
+# eval "$(register-python-argcomplete3 ros2)"
+# eval "$(register-python-argcomplete3 colcon)"
 export PATH="/home/lucien/.local/bin:$PATH"
 export PATH_TO_OPENC3="/home/lucien/git/openc3-SMC"
 # Install Ruby Gems to ~/gems
