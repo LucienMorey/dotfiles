@@ -19,6 +19,8 @@
     - zsh
     - tmux
     - build-essential
+    - gnome-shell-extensions
+    - gnome-shell-extension-system76-power
 
   - snap:
     - spotify:
