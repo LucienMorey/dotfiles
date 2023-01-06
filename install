@@ -14,4 +14,9 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" --plugin-dir "${DOTBOT_PLUGIN_DIR}" "${@}"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" \
+--plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-apt" \
+--plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-git" \
+--plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-snap" \
+--plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-sudo" \
+"${@}"
