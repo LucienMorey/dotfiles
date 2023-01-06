@@ -103,11 +103,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# argcomplete for ros2 & colcon
+eval "$(register-python-argcomplete3 ros2)"
+eval "$(register-python-argcomplete3 colcon)"
+export PATH="/home/lucien/.local/bin:$PATH"
+export PATH_TO_OPENC3="/home/lucien/git/openc3-SMC"
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
 #ROS ws
 alias pyqtdesigner="qtchooser -run-tool=designer -qt=5"
 #source /opt/ros/noetic/setup.zsh
 #source ~/catkin_ws/devel/setup.zsh
 #source ~/pfms_ws/devel/setup.zsh
 #source ~/git/pfms-2021s-LucienMorey/skeleton/a3_pf_install/setup.zsh
-source /opt/ros/foxy/setup.zsh
-source ~/smc_ws/install/setup.zsh
