@@ -30,6 +30,7 @@
       - classic: true
     - slack:
       - classic: true
+    - teams
 
 # install oh my zsh
 - shell:
