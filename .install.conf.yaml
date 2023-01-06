@@ -7,24 +7,40 @@
       stdin: true
       stdout: true
       stderr: true
+    snap:
+      classic: false # default
 
 - clean: ['~', '~/.config']
 
 # bootstrap installs
+- sudo:
+  - apt:
+    - curl
+    - zsh
+    - tmux
+    - build-essential
+
+  - snap:
+    - spotify:
+    - cmake:
+      - classic: true
+    - nvim:
+      - classic: true
+    - code:
+      - classic: true
+    - slack:
+      - classic: true
+
+# install oh my zsh
 - shell:
-  - sudo apt install curl
-  - sudo apt install zsh
-  - sudo apt install tmux
-  
-  # command requires i/o to work - cant input password without stderr
-  - 
-    command: chsh -s $(which zsh)
-    stdin: true
-    stdout: true
-    stderr: true
   # this needs to be tested properly
-  - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  
+  - RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install auto suggestions for oh my zsh
+- git:
+    '~/.oh-my-zsh/custom/plugins/zsh-autosuggestions':
+        url: 'https://github.com/zsh-users/zsh-autosuggestions'
+        description: 'oh my zsh - autosuggestions'
 
 # link dotfiles
 - link:
@@ -34,16 +50,3 @@
     ~/.config/nvim:
       create: true
       path: nvim
-
-- shell:
-  - echo run the following to add autosuggestions to zsh
-  - echo git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-- snap:
-  - spotify
-  - 
-    app: code
-    classic: True
-  - 
-    app: slack
-    classic: True
