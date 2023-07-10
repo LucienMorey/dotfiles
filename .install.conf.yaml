@@ -30,6 +30,7 @@
     - slack:
       - classic: true
     - teams-for-linux:
+    - discord:
 
 # install oh my zsh
 - shell:
