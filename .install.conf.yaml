@@ -29,7 +29,7 @@
       - classic: true
     - slack:
       - classic: true
-    - teams
+    - teams-for-linux:
 
 # install oh my zsh
 - shell:
