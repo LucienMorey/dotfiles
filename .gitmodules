@@ -1,16 +1,20 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = git@github.com:anishathalye/dotbot
+	branch = master
 [submodule "dotbot_plugins/dotbot-apt"]
 	path = dotbot_plugins/dotbot-apt
-	url = https://github.com/bryant1410/dotbot-apt
+	url = git@github.com:bryant1410/dotbot-apt
+	branch = master
 [submodule "dotbot_plugins/dotbot-sudo"]
 	path = dotbot_plugins/dotbot-sudo
-	url = https://github.com/DrDynamic/dotbot-sudo.git
+	url = git@github.com:DrDynamic/dotbot-sudo.git
+	branch = master
 [submodule "dotbot_plugins/dotbot-snap"]
 	path = dotbot_plugins/dotbot-snap
-	url = https://github.com/LucienMorey/dotbot-snap.git
-	branch = list_fix
+	url = git@github.com:DrDynamic/dotbot-snap.git
+	branch = master
 [submodule "dotbot_plugins/dotbot-git"]
 	path = dotbot_plugins/dotbot-git
-	url = https://github.com/DrDynamic/dotbot-git.git
+	url = git@github.com:DrDynamic/dotbot-git.git
+	branch = master
