@@ -31,6 +31,9 @@
       - classic: true
     - teams-for-linux:
     - discord:
+    - gnome-shell-extension-manager:
+    - nvim:
+      - classic: true
 
 # install oh my zsh
 - shell:
@@ -51,3 +54,6 @@
     ~/.config/nvim:
       create: true
       path: nvim
+
+- shell:
+  - git config --global core.editor "nvim"
