@@ -31,7 +31,6 @@
       - classic: true
     - teams-for-linux:
     - discord:
-    - gnome-shell-extension-manager:
     - nvim:
       - classic: true
 
