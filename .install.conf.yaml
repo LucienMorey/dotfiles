@@ -20,11 +20,10 @@
     - tmux
     - build-essential
     - xclip
+    - cmake
 
   - snap:
     - spotify:
-    - cmake:
-      - classic: true
     - code:
       - classic: true
     - slack:
