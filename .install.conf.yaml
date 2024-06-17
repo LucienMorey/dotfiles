@@ -27,7 +27,6 @@
     - code:
       - classic: true
     - slack:
-      - classic: true
     - teams-for-linux:
     - discord:
     - nvim:
