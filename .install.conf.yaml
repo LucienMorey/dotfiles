@@ -25,6 +25,7 @@
     - build-essential
     - xclip
     - cmake
+    - gitk
 
   - snap:
     - spotify:
