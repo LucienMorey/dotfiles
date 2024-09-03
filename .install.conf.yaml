@@ -30,11 +30,11 @@
   - snap:
     - spotify:
     - code:
-      - classic: true
+      classic: true
     - slack:
     - discord:
     - nvim:
-      - classic: true
+      classic: true
 
   - shell:
     - chsh -s $(which zsh) "$USER"
