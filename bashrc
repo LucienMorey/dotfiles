@@ -115,6 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source /opt/ros/melodic/setup.bash
-source ~/catkin_ws/devel/setup.bash
-source ~/catkin_ws/install/setup.bash
