@@ -53,3 +53,6 @@
 
 - shell:
   - git config --global core.editor "nvim"
+
+- shell:
+  - gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'spotify_spotify.desktop']"
