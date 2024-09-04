@@ -13,7 +13,7 @@
 
 - clean: ['~', '~/.config']
 
-# install oh my zsh
+# install oh my zsh. this will not change the shell automatically (that is done later to save time on password injection)
 - if:
     cond: if [ -z $ZSH ] && [ ! -d /home/$USER/.oh-my-zsh ]; then exit 0; else exit 1;fi
     met:
@@ -23,7 +23,7 @@
       - shell:
           - echo ZSH already seems to be installed. skipping
 
-# bootstrap installs
+# bootstrap installs and shell
 - sudo:
     - apt:
         - curl
@@ -44,6 +44,7 @@
           classic: true
         - bitwarden:
 
+    # change to zsh for the user running the script
     - shell:
         - chsh -s $(which zsh) "$SUDO_USER"
 
@@ -62,9 +63,11 @@
       create: true
       path: nvim
 
+# default git config
 - shell:
     - git config --global core.editor "nvim"
     - git config --global user.name "Lucien Morey"
 
+# update ubuntu dock with default preferred shortcuts
 - shell:
     - gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'spotify_spotify.desktop']"
