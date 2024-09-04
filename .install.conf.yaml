@@ -1,3 +1,4 @@
+---
 - defaults:
     link:
       create: true
@@ -14,42 +15,42 @@
 
 # install oh my zsh
 - if:
-  - cond: if [ -z $ZSH ] && [ ! -d /home/$USER/.oh-my-zsh ]; then exit 0; else exit 1;fi
+    cond: if [ -z $ZSH ] && [ ! -d /home/$USER/.oh-my-zsh ]; then exit 0; else exit 1;fi
     met:
       - shell:
-        - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+          - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     unmet:
       - shell:
-        - echo ZSH already seems to be installed. skipping
+          - echo ZSH already seems to be installed. skipping
 
 # bootstrap installs
 - sudo:
-  - apt:
-    - curl
-    - zsh
-    - tmux
-    - build-essential
-    - xclip
-    - cmake
-    - gitk
+    - apt:
+        - curl
+        - zsh
+        - tmux
+        - build-essential
+        - xclip
+        - cmake
+        - gitk
 
-  - snap:
-    - spotify:
-    - code:
-      classic: true
-    - slack:
-    - discord:
-    - nvim:
-      classic: true
+    - snap:
+        - spotify:
+        - code:
+          classic: true
+        - slack:
+        - discord:
+        - nvim:
+          classic: true
 
-  - shell:
-    - chsh -s $(which zsh) "$SUDO_USER"
+    - shell:
+        - chsh -s $(which zsh) "$SUDO_USER"
 
 # install auto suggestions for oh my zsh
 - git:
     '~/.oh-my-zsh/custom/plugins/zsh-autosuggestions':
-        url: 'https://github.com/zsh-users/zsh-autosuggestions'
-        description: 'oh my zsh - autosuggestions'
+      url: 'https://github.com/zsh-users/zsh-autosuggestions'
+      description: 'oh my zsh - autosuggestions'
 
 # link dotfiles
 - link:
@@ -61,8 +62,8 @@
       path: nvim
 
 - shell:
-  - git config --global core.editor "nvim"
-  - git config --global user.name "Lucien Morey"
+    - git config --global core.editor "nvim"
+    - git config --global user.name "Lucien Morey"
 
 - shell:
-  - gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'spotify_spotify.desktop']"
+    - gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'spotify_spotify.desktop']"

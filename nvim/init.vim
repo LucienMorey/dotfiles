@@ -25,7 +25,7 @@
 "     set softtabstop=4 "number of spaces in a TAB when editing
 "     set shiftwidth=4 "indent
 "     set expandtab "tabs use spaces
-    
+
 "     set showmatch "match ({[]})
 
 "     set incsearch "search as characters are entered
@@ -38,5 +38,3 @@
 :nmap ; :
 "use ; instead of : for commands
 inoremap jk <esc>
-
-
