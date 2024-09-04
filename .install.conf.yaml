@@ -43,7 +43,7 @@
       classic: true
 
   - shell:
-    - chsh -s $(which zsh) "$USER"
+    - chsh -s $(which zsh) "$SUDO_USER"
 
 # install auto suggestions for oh my zsh
 - git:
