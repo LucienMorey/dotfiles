@@ -42,6 +42,7 @@
         - discord:
         - nvim:
           classic: true
+        - bitwarden:
 
     - shell:
         - chsh -s $(which zsh) "$SUDO_USER"
