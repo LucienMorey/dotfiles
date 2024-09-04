@@ -13,8 +13,14 @@
 - clean: ['~', '~/.config']
 
 # install oh my zsh
-- shell:
-  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+- if:
+  - cond: if [ -z $ZSH ] && [ ! -d /home/$USER/.oh-my-zsh ]; then exit 0; else exit 1;fi
+    met:
+      - shell:
+        - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    unmet:
+      - shell:
+        - echo ZSH already seems to be installed. skipping
 
 # bootstrap installs
 - sudo:

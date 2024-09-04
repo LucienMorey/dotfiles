@@ -19,4 +19,5 @@ git submodule update --init --recursive
 --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-git" \
 --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-snap" \
 --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-sudo" \
+--plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-if" \
 "${@}"

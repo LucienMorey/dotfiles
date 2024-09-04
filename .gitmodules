@@ -1,7 +1,7 @@
 [submodule "dotbot"]
 	path = dotbot
-	url = git@github.com:anishathalye/dotbot
-	branch = master
+	url = git@github.com:kurtmckee/pr-dotbot.git
+	branch = resolve-dispatcher-plugins-failure-issue-339
 [submodule "dotbot_plugins/dotbot-apt"]
 	path = dotbot_plugins/dotbot-apt
 	url = git@github.com:bryant1410/dotbot-apt
@@ -18,3 +18,7 @@
 	path = dotbot_plugins/dotbot-git
 	url = git@github.com:DrDynamic/dotbot-git.git
 	branch = master
+[submodule "dotbot_plugins/dotbot-if"]
+	path = dotbot_plugins/dotbot-if
+	url = git@github.com:smergler/dotbot-if.git
+	branch = main
