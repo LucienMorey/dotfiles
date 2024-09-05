@@ -33,6 +33,7 @@
         - xclip
         - cmake
         - gitk
+        - timewarrior
 
     - snap:
         - spotify:
@@ -53,6 +54,9 @@
     '~/.oh-my-zsh/custom/plugins/zsh-autosuggestions':
       url: 'https://github.com/zsh-users/zsh-autosuggestions'
       description: 'oh my zsh - autosuggestions'
+    '~/.oh-my-zsh/custom/themes/powerlevel10k':
+      url: 'https://github.com/romkatv/powerlevel10k.git'
+      description: 'oh my zsh - powerlevel10k'
 
 # link dotfiles
 - link:
@@ -62,6 +66,7 @@
     ~/.config/nvim:
       create: true
       path: nvim
+    ~/.p10k.zsh: p10k.zsh
 
 # default git config
 - shell:
