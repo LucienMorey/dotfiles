@@ -23,6 +23,9 @@
       - shell:
           - echo ZSH already seems to be installed. skipping
 
+- shell:
+    - wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
+
 # bootstrap installs and shell
 - sudo:
     - apt:
@@ -48,6 +51,14 @@
     # change to zsh for the user running the script
     - shell:
         - chsh -s $(which zsh) "$SUDO_USER"
+
+    - shell:
+        - rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.1.linux-amd64.tar.gz
+
+# This has path set explicitly temporarily because the shell profile cant be resourced and have the path propagate upwards
+- shell:
+    - rm -f go1.23.1.linux-amd64.tar.gz
+    - PATH=$PATH:/usr/local/go/bin go install github.com/google/yamlfmt/cmd/yamlfmt@latest
 
 # install auto suggestions for oh my zsh
 - git:
