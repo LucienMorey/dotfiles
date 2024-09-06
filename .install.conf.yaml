@@ -91,3 +91,4 @@
 # update ubuntu dock with default preferred shortcuts
 - shell:
     - gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'spotify_spotify.desktop', 'bitwarden_bitwarden.desktop']"
+    - dconf load /org/gnome/terminal/legacy/profiles:/ < gnome-terminal-profiles.dconf
