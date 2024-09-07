@@ -41,6 +41,8 @@
         - libfuse2
         - precommit
         - black
+        - clang
+        - clang-format
 
     - snap:
         - spotify:
