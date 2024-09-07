@@ -1,5 +1,5 @@
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap=true, silent=true }
+  local options = { noremap = true, silent = true }
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
@@ -18,3 +18,10 @@ map('', '<right>', '<nop>')
 map('i', 'jk', '<Esc>')
 
 map("n", ';', ":")
+
+map("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>")
+map("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>")
+map("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>")
+map("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>")
+map("n", "<C-\\>", "<Cmd>NvimTmuxNavigateLastActive<CR>")
+map("n", "<C-Space>", "<Cmd>NvimTmuxNavigateNavigateNext<CR>")
