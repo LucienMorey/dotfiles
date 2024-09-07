@@ -39,6 +39,8 @@
         - cmake
         - gitk
         - libfuse2
+        - precommit
+        - black
 
     - snap:
         - spotify:
