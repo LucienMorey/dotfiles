@@ -25,6 +25,8 @@
 
 - shell:
     - wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
+    - wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    - chmod u+x nvim.appimage
 
 # bootstrap installs and shell
 - sudo:
@@ -37,6 +39,7 @@
         - cmake
         - gitk
         - timewarrior
+        - libfuse2
 
     - snap:
         - spotify:
@@ -44,8 +47,6 @@
           classic: true
         - slack:
         - discord:
-        - nvim:
-          classic: true
         - bitwarden:
 
     # change to zsh for the user running the script
@@ -54,6 +55,12 @@
 
     - shell:
         - rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.1.linux-amd64.tar.gz
+
+    - create:
+        - /opt/nvim
+
+    - shell:
+        - mv nvim.appimage /opt/nvim/nvim
 
 # This has path set explicitly temporarily because the shell profile cant be resourced and have the path propagate upwards
 - shell:
