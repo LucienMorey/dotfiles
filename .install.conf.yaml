@@ -39,7 +39,7 @@
         - cmake
         - gitk
         - libfuse2
-        - precommit
+        - pre-commit
         - black
         - clang
         - clang-format
