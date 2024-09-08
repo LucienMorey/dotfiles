@@ -78,7 +78,7 @@
     '~/.oh-my-zsh/custom/themes/powerlevel10k':
       url: 'https://github.com/romkatv/powerlevel10k.git'
       description: 'oh my zsh - powerlevel10k'
-    '~/.oh-my-zsh/custom/themes/zsh-syntax-highlighting':
+    '~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting':
       url: 'https://github.com/romkatv/zsh-syntax-highlighting.git'
       description: 'oh my zsh - syntax highlighting'
 
