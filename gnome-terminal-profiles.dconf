@@ -4,13 +4,15 @@ list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
 
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 audible-bell=false
-background-color='rgb(0,0,0)'
+background-color='#1C262B'
 background-transparency-percent=3
+bold-color='#FFFFFF'
+bold-color-same-as-fg=true
 bold-is-bright=true
-foreground-color='rgb(208,207,204)'
-palette=['rgb(0,0,0)', 'rgb(170,0,0)', 'rgb(0,170,0)', 'rgb(170,85,0)', 'rgb(0,0,170)', 'rgb(170,0,170)', 'rgb(0,170,170)', 'rgb(170,170,170)', 'rgb(85,85,85)', 'rgb(255,85,85)', 'rgb(85,255,85)', 'rgb(255,255,85)', 'rgb(85,85,255)', 'rgb(255,85,255)', 'rgb(85,255,255)', 'rgb(255,255,255)']
+foreground-color='#C2C8D7'
+palette=['#000000', '#EE2A29', '#3FA33F', '#FEE92E', '#1D80EF', '#8800A0', '#16AEC9', '#A4A4A4', '#767676', '#DC5B60', '#70BE71', '#FEF063', '#53A4F3', '#A94DBB', '#42C6D9', '#FFFEFE']
 use-system-font=true
 use-theme-colors=false
 use-theme-transparency=false
 use-transparent-background=true
-visible-name='lucien'
+visible-name='Material'
