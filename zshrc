@@ -80,6 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git tmux zsh-autosuggestions docker docker-compose zsh-syntax-highlighting)
 
 ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_FIXTERM=true
 
 source $ZSH/oh-my-zsh.sh
