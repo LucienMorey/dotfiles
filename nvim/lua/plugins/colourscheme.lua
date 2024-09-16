@@ -14,6 +14,7 @@ return {
                 },
                 disable = {
                     eob_lines = true,
+                    background = true,
                     -- borders = true,
                 },
                 styles = {
