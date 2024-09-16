@@ -1,32 +1,32 @@
 return {
-  {
-      'marko-cerovac/material.nvim',
-      priority = 1000,
-      config = function()
-          local material = require 'material'
+    {
+        'marko-cerovac/material.nvim',
+        priority = 1000,
+        config = function()
+            local material = require 'material'
 
-          vim.g.material_style = 'oceanic'
+            vim.g.material_style = 'oceanic'
 
-          material.setup {
-              -- vibrant_syntax = true,
-              contrast = {
-                  cursor_line = true,
-              },
-              disable = {
-                  eob_lines = true,
-                  -- borders = true,
-              },
-              styles = {
-                  comments = { italic = true },
-                  functions = { italic = true },
-              },
-              plugins = {
-                  'telescope',
-              },
-          }
+            material.setup {
+                -- vibrant_syntax = true,
+                contrast = {
+                    cursor_line = true,
+                },
+                disable = {
+                    eob_lines = true,
+                    -- borders = true,
+                },
+                styles = {
+                    comments = { italic = true },
+                    functions = { italic = true },
+                },
+                plugins = {
+                    'telescope',
+                },
+            }
 
-          -- enable the colorscheme
-          vim.cmd 'colorscheme material'
-      end
-  },
+            -- enable the colorscheme
+            vim.cmd 'colorscheme material'
+        end
+    },
 }
