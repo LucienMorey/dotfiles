@@ -106,3 +106,4 @@
     - gsettings set org.gnome.desktop.background picture-uri-dark "file://$(realpath ".")/wallpaper.jpg"
     - gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
     - gsettings set org.gnome.desktop.interface icon-theme "Yaru-viridian"
+    - gsettings set org.gnome.desktop.interface gtk-theme "Yaru-viridian-dark"
