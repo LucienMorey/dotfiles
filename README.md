@@ -1,15 +1,21 @@
 # Lucien's Dotfiles
 
-This repository contains my personal dotfiles to bootstrap an installation on an Ubuntu Linux machine. It utilises [Dotbot](https://github.com/anishathalye/dotbot) under the hood to automate installation according to the steps defined in `.install.conf.yaml`.
+This repository contains my personal dotfiles to bootstrap an installation on an Ubuntu Linux machine. It utilises [Dotbot](https://github.com/anishathalye/dotbot) under the hood to automate installation of a [profile specification](meta/profiles/). Each profile specification defines a list of config specifications outlining setup. The available configs are specified in the [configs directory](meta/configs/).
 
 ## Installation
 
-Clone down the repository, change to the new directory and run the install script
+Clone down the repository, change to the new directory and run the install script. I run the workstation profile as a default.
 
 ```bash
 git clone https://github.com/LucienMorey/dotfiles.git
 cd dotfiles
-./install
+./install-profile workstation
+```
+
+An executable for individual config installation is also offered. Configs can be run as sudo be adding the sudo suffix to the config-name.
+
+```bash
+./install-standalone nvim-config nvim-install-sudo
 ```
 
 ## Features
