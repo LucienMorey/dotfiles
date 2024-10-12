@@ -1,5 +1,5 @@
 - shell:
-    - gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'org.gnome.Terminal.desktop', 'spotify_spotify.desktop', 'bitwarden_bitwarden.desktop']"
+    - dconf load /org/gnome/shell/ < ui/gnome/dock-apps.dconf
     - dconf load /org/gnome/terminal/legacy/profiles:/ < ui/gnome/gnome-terminal-profiles.dconf
     - dconf load /org/gnome/desktop/interface/ < ui/gnome/gnome-desktop-interface.dconf
     - gsettings set org.gnome.desktop.background picture-uri "file://$(realpath ".")/ui/wallpapers/swirls.jpg"
