@@ -1,6 +1,6 @@
 - shell:
     - dconf load /org/gnome/shell/ < ui/gnome/dock-apps.dconf
-    - dconf load /org/gnome/terminal/legacy/profiles:/ < ui/gnome/gnome-terminal-profiles.dconf
-    - dconf load /org/gnome/desktop/interface/ < ui/gnome/gnome-desktop-interface.dconf
+    - dconf load /org/gnome/terminal/legacy/profiles:/ < ui/gnome/terminal-profile.dconf
+    - dconf load /org/gnome/desktop/interface/ < ui/gnome/desktop-theme.dconf
     - gsettings set org.gnome.desktop.background picture-uri "file://$(realpath ".")/ui/wallpapers/swirls.jpg"
     - gsettings set org.gnome.desktop.background picture-uri-dark "file://$(realpath ".")/ui/wallpapers/swirls.jpg"
