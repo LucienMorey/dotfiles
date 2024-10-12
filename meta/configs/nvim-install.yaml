@@ -1,0 +1,9 @@
+- shell:
+    - wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    - chmod u+x nvim.appimage
+
+- create:
+    - /opt/nvim
+
+- shell:
+    - mv nvim.appimage /opt/nvim/nvim

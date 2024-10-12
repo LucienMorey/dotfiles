@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+set -e
+
+BASE_CONFIG="base"
+CONFIG_SUFFIX=".yaml"
+
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+META_DIR="${BASE_DIR}/meta"
+CONFIG_DIR="${META_DIR}/configs"
+PROFILES_DIR="${META_DIR}/profiles"
+
+DOTBOT_DIR="${META_DIR}/.dotbot"
+DOTBOT_BIN="bin/dotbot"
+DOTBOT_PLUGIN_DIR="${META_DIR}/.dotbot_plugins"
+
+
+cd "${BASE_DIR}"
+git -C "${BASE_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${BASE_DIR}"
+
+
+while IFS= read -r config; do
+    CONFIGS+=" ${config}"
+done < "${PROFILES_DIR}/$1"
+
+shift
+
+for config in ${CONFIGS} ${@}; do
+    echo -e "\nConfigure $config"
+    # create temporary file
+    configFile="$(mktemp)"
+    suffix="-sudo"
+    echo -e "$(<"${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${CONFIG_DIR}/${config%"$suffix"}${CONFIG_SUFFIX}")" > "$configFile"
+
+    cmd=("${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" -c "$configFile" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-apt" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-git" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-snap" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-if" \
+    )
+
+    if [[ $config == *"sudo"* ]]; then
+        cmd=(sudo "${cmd[@]}")
+    fi
+
+    "${cmd[@]}"
+    rm -f "$configFile"
+done
+
+cd "${BASE_DIR}"

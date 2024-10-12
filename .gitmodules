@@ -1,24 +1,24 @@
 [submodule "dotbot"]
-	path = .dotbot
+	path = meta/.dotbot
 	url = git@github.com:kurtmckee/pr-dotbot.git
 	branch = resolve-dispatcher-plugins-failure-issue-339
 [submodule "dotbot_plugins/dotbot-apt"]
-	path = .dotbot_plugins/dotbot-apt
+	path = meta/.dotbot_plugins/dotbot-apt
 	url = git@github.com:bryant1410/dotbot-apt
 	branch = master
 [submodule "dotbot_plugins/dotbot-sudo"]
-	path = .dotbot_plugins/dotbot-sudo
+	path = meta/.dotbot_plugins/dotbot-sudo
 	url = git@github.com:DrDynamic/dotbot-sudo.git
 	branch = master
 [submodule "dotbot_plugins/dotbot-snap"]
-	path = .dotbot_plugins/dotbot-snap
+	path = meta/.dotbot_plugins/dotbot-snap
 	url = git@github.com:DrDynamic/dotbot-snap.git
 	branch = master
 [submodule "dotbot_plugins/dotbot-git"]
-	path = .dotbot_plugins/dotbot-git
+	path = meta/.dotbot_plugins/dotbot-git
 	url = git@github.com:DrDynamic/dotbot-git.git
 	branch = master
 [submodule "dotbot_plugins/dotbot-if"]
-	path = .dotbot_plugins/dotbot-if
+	path = meta/.dotbot_plugins/dotbot-if
 	url = git@github.com:smergler/dotbot-if.git
 	branch = main

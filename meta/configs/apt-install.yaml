@@ -1,0 +1,13 @@
+- apt:
+    - curl
+    - zsh
+    - tmux
+    - build-essential
+    - xclip
+    - cmake
+    - gitk
+    - libfuse2
+    - pre-commit
+    - black
+    - clang
+    - clang-format

@@ -1,0 +1,25 @@
+# install oh my zsh. this will not change the shell automatically (that is done later to save time on password injection)
+- if:
+    cond: if [ -z $ZSH ] && [ ! -d /home/$USER/.oh-my-zsh ]; then exit 0; else exit 1;fi
+    met:
+      - shell:
+          - sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    unmet:
+      - shell:
+          - echo ZSH already seems to be installed. skipping
+
+# install auto suggestions for oh my zsh
+- git:
+    '~/.oh-my-zsh/custom/plugins/zsh-autosuggestions':
+      url: 'https://github.com/zsh-users/zsh-autosuggestions'
+      description: 'oh my zsh - autosuggestions'
+    '~/.oh-my-zsh/custom/themes/powerlevel10k':
+      url: 'https://github.com/romkatv/powerlevel10k.git'
+      description: 'oh my zsh - powerlevel10k'
+    '~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting':
+      url: 'https://github.com/romkatv/zsh-syntax-highlighting.git'
+      description: 'oh my zsh - syntax highlighting'
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.p10k.zsh: p10k.zsh

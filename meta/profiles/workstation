@@ -1,0 +1,12 @@
+apt-install-sudo
+snap-install-sudo
+go-core-install-sudo
+nvim-install-sudo
+change-shell-zsh-sudo
+zsh-config
+bash-config
+tmux-config
+go-module-install
+nvim-config
+git-config
+ui-config
