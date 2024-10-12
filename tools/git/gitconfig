@@ -1,0 +1,8 @@
+[user]
+    name = Lucien Morey
+
+[core]
+    editor = nvim
+
+[init]
+    defaultBranch = main

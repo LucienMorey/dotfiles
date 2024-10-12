@@ -3,6 +3,7 @@ snap-install-sudo
 go-core-install-sudo
 nvim-install-sudo
 change-shell-zsh-sudo
+git-config
 zsh-config
 bash-config
 tmux-config
