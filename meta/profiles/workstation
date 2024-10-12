@@ -8,6 +8,7 @@ zsh-config
 bash-config
 tmux-config
 yamlfmt-install
+shfmt-install
 nvim-config
 git-config
 ui-config
