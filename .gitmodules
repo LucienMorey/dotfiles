@@ -6,10 +6,6 @@
 	path = meta/.dotbot_plugins/dotbot-apt
 	url = git@github.com:bryant1410/dotbot-apt
 	branch = master
-[submodule "dotbot_plugins/dotbot-sudo"]
-	path = meta/.dotbot_plugins/dotbot-sudo
-	url = git@github.com:DrDynamic/dotbot-sudo.git
-	branch = master
 [submodule "dotbot_plugins/dotbot-snap"]
 	path = meta/.dotbot_plugins/dotbot-snap
 	url = git@github.com:DrDynamic/dotbot-snap.git
