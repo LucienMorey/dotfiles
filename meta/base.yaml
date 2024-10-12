@@ -4,9 +4,5 @@
       create: true
       relink: true
       force: true
-    shell:
-      stdin: true
-      stdout: true
-      stderr: true
 
 - clean: ['~', '~/.config']
