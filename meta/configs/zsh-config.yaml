@@ -1,4 +1,5 @@
-# install oh my zsh. this will not change the shell automatically (that is done later to save time on password injection)
+# install oh my zsh if its not already present.
+# this will not change the shell automatically. shell change is handled in another config intended to be run with root access.
 - if:
     cond: if [ -z $ZSH ] && [ ! -d /home/$USER/.oh-my-zsh ]; then exit 0; else exit 1;fi
     met:
@@ -8,7 +9,6 @@
       - shell:
           - echo ZSH already seems to be installed. skipping
 
-# install auto suggestions for oh my zsh
 - git:
     '~/.oh-my-zsh/custom/plugins/zsh-autosuggestions':
       url: 'https://github.com/zsh-users/zsh-autosuggestions'
