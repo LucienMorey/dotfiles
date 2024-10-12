@@ -1,2 +1,2 @@
 - link:
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: shell/tmux/tmux.conf
