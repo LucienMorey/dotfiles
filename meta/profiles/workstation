@@ -6,7 +6,7 @@ change-shell-zsh-sudo
 zsh-config
 bash-config
 tmux-config
-go-module-install
+yamlfmt-install
 nvim-config
 git-config
 ui-config
