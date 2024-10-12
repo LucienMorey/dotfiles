@@ -5,14 +5,15 @@ set -e
 BASE_CONFIG="base"
 CONFIG_SUFFIX=".yaml"
 
-META_DIR="meta"
-CONFIG_DIR="configs"
-PROFILES_DIR="profiles"
-
-DOTBOT_DIR="dotbot"
-DOTBOT_BIN="bin/dotbot"
-
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+META_DIR="${BASE_DIR}/meta"
+CONFIG_DIR="${META_DIR}/configs"
+PROFILES_DIR="${META_DIR}/profiles"
+
+DOTBOT_DIR="${META_DIR}/.dotbot"
+DOTBOT_BIN="bin/dotbot"
+DOTBOT_PLUGIN_DIR="${META_DIR}/.dotbot_plugins"
 
 
 cd "${BASE_DIR}"
@@ -22,9 +23,14 @@ for config in ${@}; do
     # create temporary file
     configFile="$(mktemp)"
     suffix="-sudo"
-    echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config%"$suffix"}${CONFIG_SUFFIX}")" > "$configFile"
+    echo -e "$(<"${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${CONFIG_DIR}/${config%"$suffix"}${CONFIG_SUFFIX}")" > "$configFile"
 
-    cmd=("${BASE_DIR}/${META_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" -c "$configFile")
+    cmd=("${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" -c "$configFile" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-apt" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-git" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-snap" \
+    --plugin-dir "${DOTBOT_PLUGIN_DIR}/dotbot-if" \
+    )
 
     if [[ $config == *"sudo"* ]]; then
         cmd=(sudo "${cmd[@]}")
