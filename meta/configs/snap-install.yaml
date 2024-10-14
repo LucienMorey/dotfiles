@@ -1,7 +1,7 @@
 - snap:
     - spotify:
     - code:
-      classic: true
+        classic: true
     - slack:
     - discord:
     - bitwarden:
