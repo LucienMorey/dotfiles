@@ -4,6 +4,8 @@
     editor = nvim
 [init]
     defaultBranch = main
+[submodule]
+		recurse = true
 
 # pinched from this article https://blog.gitbutler.com/how-git-core-devs-configure-git/
 [column]
