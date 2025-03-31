@@ -7,6 +7,14 @@
 [submodule]
 		recurse = true
 
+[alias]
+
+    # Color graph log view
+    graph = log --color --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an (%G?)>%Creset' --abbrev-commit
+
+    # Remove branches that have already been merged with main
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
+
 # pinched from this article https://blog.gitbutler.com/how-git-core-devs-configure-git/
 [column]
     ui = auto
