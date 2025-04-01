@@ -1,0 +1,37 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+      "key": "ctrl+c",
+      "command": "-vscode-neovim.escape",
+      "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && !dirtyDiffVisible && !findWidgetVisible && !inReferenceSearchEditor && !markersNavigationVisible && !notebookCellFocused && !notificationCenterVisible && !parameterHintsVisible && !referenceSearchVisible && neovim.mode == 'normal'"
+  },
+  {
+      "key": "ctrl+c",
+      "command": "-vscode-neovim.escape",
+      "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.init && neovim.mode != 'normal'"
+  },
+  {
+      "key": "ctrl+c",
+      "command": "-vscode-neovim.escape",
+      "when": "editorTextFocus && neovim.ctrlKeysNormal.c && neovim.init && !dirtyDiffVisible && !findWidgetVisible && !inReferenceSearchEditor && !markersNavigationVisible && !notebookCellFocused && !notificationCenterVisible && !parameterHintsVisible && !referenceSearchVisible && neovim.mode == 'normal' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+      "key": "ctrl+c",
+      "command": "-vscode-neovim.escape",
+      "when": "editorTextFocus && neovim.ctrlKeysInsert.c && neovim.init && neovim.mode != 'normal' && editorLangId not in 'neovim.editorLangIdExclusions'"
+  },
+  {
+      "key": "ctrl+k ctrl+r",
+      "command": "git.revertSelectedRanges",
+      "when": "-"
+  },
+  {
+      "key": "ctrl+k ctrl+r",
+      "command": "-git.revertSelectedRanges",
+      "when": "isInDiffEditor && !operationInProgress"
+  },
+  {
+      "key": "ctrl+k ctrl+r",
+      "command": "-workbench.action.keybindingsReference"
+  }
+]

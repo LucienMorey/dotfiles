@@ -1,0 +1,94 @@
+{
+  // ui
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Theme",
+  "editor.minimap.enabled": false,
+  "vsicons.dontShowNewVersionMessage": true,
+
+  // terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+
+  // editor
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
+    },
+    "jk": {
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode-neovim')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')"
+        ]
+      ]
+    }
+  },
+  "editor.tabSize": 2,
+  "editor.indentSize": "tabSize",
+
+  // language specific
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "always"
+    }
+  },
+  "black-formatter.importStrategy": "fromEnvironment",
+  "black-formatter.path": [
+    "black"
+  ],
+
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.compilerArgs": [
+    "-Wall"
+  ],
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**"
+  ],
+  "c-cpp-flylint.standard": [
+    "c11",
+    "c++17"
+  ],
+  "c-cpp-flylint.flexelint.enable": false,
+  "c-cpp-flylint.flawfinder.enable": false,
+  "c-cpp-flylint.lizard.enable": false,
+  "c-cpp-flylint.excludeFromWorkspacePaths": [
+    "${workspaceFolder}/**/expected_vendor/**",
+    "${workspaceFolder}/**/abseil_vendor/**",
+  ],
+
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+
+  "[yaml]": {
+    "editor.defaultFormatter": "bluebrown.yamlfmt"
+  },
+
+  "[shellscript]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
+  },
+
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": false,
+
+  "git.detectSubmodulesLimit": 50,
+  "git.openRepositoryInParentFolders": "always",
+  "chat.commandCenter.enabled": false
+}
