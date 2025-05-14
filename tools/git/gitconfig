@@ -15,6 +15,8 @@
     # Remove branches that have already been merged with main
     dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d; git remote -v update -p"
 
+    amend = commit --amend --reuse-message=HEAD
+
 # pinched from this article https://blog.gitbutler.com/how-git-core-devs-configure-git/
 [column]
     ui = auto
