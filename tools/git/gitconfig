@@ -1,11 +1,12 @@
 [user]
     name = Lucien Morey
+	email = lucien@spacemachines.com
 [core]
     editor = nvim
 [init]
     defaultBranch = main
 [submodule]
-		recurse = true
+		recurse = false
 
 [alias]
 
@@ -36,7 +37,7 @@
 [fetch]
     prune = true
     pruneTags = true
-    all = true
+    all = false
 [help]
     autocorrect = prompt
 [commit]
@@ -52,3 +53,9 @@
     conflictstyle = zdiff3
 [pull]
     rebase = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
