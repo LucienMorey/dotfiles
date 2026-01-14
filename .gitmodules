@@ -1,20 +1,20 @@
 [submodule "dotbot"]
 	path = meta/.dotbot
-	url = git@github.com:anishathalye/dotbot.git
+	url = https://github.com/anishathalye/dotbot.git
 	branch = master
 [submodule "dotbot_plugins/dotbot-apt"]
 	path = meta/.dotbot_plugins/dotbot-apt
-	url = git@github.com:bryant1410/dotbot-apt
+	url = https://github.com/bryant1410/dotbot-apt
 	branch = master
 [submodule "dotbot_plugins/dotbot-snap"]
 	path = meta/.dotbot_plugins/dotbot-snap
-	url = git@github.com:DrDynamic/dotbot-snap.git
+	url = https://github.com/DrDynamic/dotbot-snap.git
 	branch = master
 [submodule "dotbot_plugins/dotbot-git"]
 	path = meta/.dotbot_plugins/dotbot-git
-	url = git@github.com:DrDynamic/dotbot-git.git
+	url = https://github.com/DrDynamic/dotbot-git.git
 	branch = master
 [submodule "dotbot_plugins/dotbot-if"]
 	path = meta/.dotbot_plugins/dotbot-if
-	url = git@github.com:smergler/dotbot-if.git
+	url = https://github.com/smergler/dotbot-if.git
 	branch = main
