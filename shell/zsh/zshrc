@@ -118,5 +118,11 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
+function local_ros() {
+    source /opt/ros/rolling/local_setup.zsh
+    eval "$(register-python-argcomplete ros2)"
+    eval "$(register-python-argcomplete colcon)"
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
