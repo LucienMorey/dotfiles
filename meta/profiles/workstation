@@ -1,6 +1,6 @@
 core-apt-install-sudo
 snap-install-sudo
-go-core-install-sudo
+go-install-sudo
 nvim-install-sudo
 change-shell-zsh-sudo
 git-config
