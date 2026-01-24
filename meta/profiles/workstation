@@ -1,4 +1,5 @@
 dev-tools-rootful-install-sudo
+dev-tools-rootless-install
 snap-install-sudo
 nvim-install-sudo
 zsh-install-sudo
@@ -10,4 +11,3 @@ tmux-install-sudo
 tmux-config
 nvim-config
 ui-config
-dev-tools-rootless-install
