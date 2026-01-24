@@ -4,5 +4,4 @@
     - build-essential
     - cmake
     - gitk
-    - libfuse2
     - clang
