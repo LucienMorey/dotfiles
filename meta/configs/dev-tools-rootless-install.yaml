@@ -4,6 +4,7 @@
     - uv tool install black
     - uv tool install mdformat
     - uv tool install clang-format
+    - uv tool install git+https://github.com/johnnymorganz/stylua
 
 # This has path set explicitly temporarily in case this is running as part of the first time execution and the path hasn't updated to include go
 - shell:
