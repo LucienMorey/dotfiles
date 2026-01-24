@@ -14,6 +14,12 @@
     - chmod ugo+x nvim-linux-x86_64.appimage
     - mv nvim-linux-x86_64.appimage /usr/bin/nvim
 
+- shell:
+    - wget https://github.com/tree-sitter/tree-sitter/releases/latest/download/tree-sitter-linux-x64.gz
+    - gunzip tree-sitter-linux-x64.gz
+    - chmod ugo+x tree-sitter-linux-x64
+    - mv tree-sitter-linux-x64 /usr/local/bin/tree-sitter
+
 - snap:
     - code:
         classic: true
