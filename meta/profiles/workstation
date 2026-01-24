@@ -1,7 +1,7 @@
 dev-tools-rootful-install-sudo
 dev-tools-rootless-install
 dev-tools-config
-snap-install-sudo
 shell-rootful-install-sudo
 shell-config
+extra-install-sudo
 ui-config
