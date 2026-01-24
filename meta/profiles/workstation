@@ -9,6 +9,5 @@ bash-config
 tmux-install-sudo
 tmux-config
 nvim-config
-git-config
 ui-config
 dev-tools-rootless-install
