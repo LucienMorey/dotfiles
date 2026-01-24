@@ -1,9 +1,7 @@
 - apt:
     - curl
     - zsh
-    - tmux
     - build-essential
-    - xclip
     - cmake
     - gitk
     - libfuse2
