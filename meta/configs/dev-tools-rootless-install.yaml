@@ -1,0 +1,16 @@
+- shell:
+    - wget -qO- https://astral.sh/uv/install.sh | sh
+    - uv tool install prek
+    - uv tool install black
+    - uv tool install mdformat
+    - uv tool install clang-format
+
+# This has path set explicitly temporarily in case this is running as part of the first time execution and the path hasn't updated to include go
+- shell:
+    - PATH=$PATH:/usr/local/go/bin go install mvdan.cc/sh/v3/cmd/shfmt@latest
+    - PATH=$PATH:/usr/local/go/bin go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+
+- link:
+    ~/.local/bin:
+      glob: true
+      path: ~/go/bin/**
