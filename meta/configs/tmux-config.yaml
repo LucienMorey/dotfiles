@@ -1,7 +1,3 @@
-- apt:
-    - tmux
-    - xclip
-
 - git:
     '~/.tmux/plugins/tpm':
       url: 'https://github.com/tmux-plugins/tpm'

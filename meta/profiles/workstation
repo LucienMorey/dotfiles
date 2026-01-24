@@ -6,6 +6,7 @@ change-shell-zsh-sudo
 git-config
 zsh-config
 bash-config
+tmux-install-sudo
 tmux-config
 yamlfmt-install
 shfmt-install
