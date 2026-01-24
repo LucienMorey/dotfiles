@@ -1,3 +1,21 @@
+# BASH
+- link:
+    ~/.bashrc: shell/bash/bashrc
+
+# GIT
+- link:
+    ~/.gitconfig: tools/git/gitconfig
+
+# TMUX
+- git:
+    '~/.tmux/plugins/tpm':
+      url: 'https://github.com/tmux-plugins/tpm'
+      description: 'tmux plugin manager'
+
+- link:
+    ~/.tmux.conf: shell/tmux/tmux.conf
+
+# ZSH
 # install oh my zsh if its not already present.
 # this will not change the shell automatically. shell change is handled in another config intended to be run with root access.
 - if:

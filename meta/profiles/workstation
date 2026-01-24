@@ -2,12 +2,7 @@ dev-tools-rootful-install-sudo
 dev-tools-rootless-install
 snap-install-sudo
 nvim-install-sudo
-zsh-install-sudo
-change-shell-zsh-sudo
-zsh-config
-git-config
-bash-config
-tmux-install-sudo
-tmux-config
+shell-rootful-install-sudo
+shell-config
 nvim-config
 ui-config
