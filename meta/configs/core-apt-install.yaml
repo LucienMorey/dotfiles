@@ -5,7 +5,4 @@
     - cmake
     - gitk
     - libfuse2
-    - pre-commit
-    - black
     - clang
-    - clang-format

@@ -8,9 +8,7 @@ zsh-config
 bash-config
 tmux-install-sudo
 tmux-config
-uv-install
-yamlfmt-install
-shfmt-install
 nvim-config
 git-config
 ui-config
+dev-tools-rootless-install
