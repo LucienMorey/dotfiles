@@ -2,9 +2,10 @@ core-apt-install-sudo
 snap-install-sudo
 go-install-sudo
 nvim-install-sudo
+zsh-install-sudo
 change-shell-zsh-sudo
-git-config
 zsh-config
+git-config
 bash-config
 tmux-install-sudo
 tmux-config

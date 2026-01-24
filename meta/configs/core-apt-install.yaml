@@ -1,6 +1,5 @@
 - apt:
     - curl
-    - zsh
     - build-essential
     - cmake
     - gitk
