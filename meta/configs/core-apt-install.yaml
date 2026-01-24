@@ -1,6 +1,0 @@
-- apt:
-    - curl
-    - build-essential
-    - cmake
-    - gitk
-    - clang
