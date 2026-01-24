@@ -1,4 +1,4 @@
-apt-install-sudo
+core-apt-install-sudo
 snap-install-sudo
 go-core-install-sudo
 nvim-install-sudo
