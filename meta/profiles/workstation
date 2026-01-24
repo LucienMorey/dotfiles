@@ -1,8 +1,7 @@
 dev-tools-rootful-install-sudo
 dev-tools-rootless-install
+dev-tools-config
 snap-install-sudo
-nvim-install-sudo
 shell-rootful-install-sudo
 shell-config
-nvim-config
 ui-config

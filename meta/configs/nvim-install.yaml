@@ -1,6 +1,0 @@
-- shell:
-    - wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-    - chmod ugo+x nvim-linux-x86_64.appimage
-
-- shell:
-    - mv nvim-linux-x86_64.appimage /usr/bin/nvim
