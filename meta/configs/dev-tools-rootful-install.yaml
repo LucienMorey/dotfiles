@@ -1,5 +1,4 @@
 - apt:
-    - curl
     - build-essential
     - cmake
     - gitk
