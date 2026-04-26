@@ -1,6 +1,14 @@
 - shell:
-    - dconf load /org/gnome/shell/ < ui/gnome/dock-apps.dconf
-    - dconf load /org/gnome/desktop/interface/ < ui/gnome/desktop-theme.dconf
+    - gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'code_code.desktop', 'ghostty_ghostty.desktop', 'spotify_spotify.desktop', 'bitwarden_bitwarden.desktop']"
+    - gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    - gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-viridian-dark'
+    - gsettings set org.gnome.desktop.interface icon-theme 'Yaru-viridian'
+    # default ghostty
+    - gsettings set org.gnome.settings-daemon.plugins.media-keys terminal '[]'
+    - gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Ghostty'
+    - gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'ghostty'
+    - gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Control><Alt>t'
+    
     # These are done manually here to substitute relative path information for the wallpaper file location
     - gsettings set org.gnome.desktop.background picture-uri "file://$(realpath ".")/ui/wallpapers/swirls.jpg"
     - gsettings set org.gnome.desktop.background picture-uri-dark "file://$(realpath ".")/ui/wallpapers/swirls.jpg"
