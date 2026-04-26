@@ -1,8 +1,6 @@
 - apt:
     - build-essential
-    - cmake
     - gitk
-    - clang
 
 - shell:
     - wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
