@@ -3,6 +3,10 @@
     - xclip
     - zsh
 
+- snap:
+    - ghostty:
+        classic: true
+
 # change to zsh for the user running the script
 - shell:
     - chsh -s $(which zsh) "$SUDO_USER"
