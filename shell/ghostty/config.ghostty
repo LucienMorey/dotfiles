@@ -1,0 +1,33 @@
+# Font (you had system font enabled, so Ghostty will just use default unless set)
+# font-family = monospace
+
+# Colors
+foreground = #C2C8D7
+background = #1C262B
+
+# Cursor (optional, Ghostty has defaults)
+# cursor-color = #C2C8D7
+
+# ANSI palette
+palette = 0=#000000
+palette = 1=#EE2A29
+palette = 2=#3FA33F
+palette = 3=#FEE92E
+palette = 4=#1D80EF
+palette = 5=#8800A0
+palette = 6=#16AEC9
+palette = 7=#A4A4A4
+palette = 8=#767676
+palette = 9=#DC5B60
+palette = 10=#70BE71
+palette = 11=#FEF063
+palette = 12=#53A4F3
+palette = 13=#A94DBB
+palette = 14=#42C6D9
+palette = 15=#FFFEFE
+
+# Bright/bold behavior
+bold-is-bright = true
+
+# Transparency
+background-opacity = 0.97

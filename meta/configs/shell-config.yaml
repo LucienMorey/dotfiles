@@ -15,6 +15,11 @@
 - link:
     ~/.tmux.conf: shell/tmux/tmux.conf
 
+- link:
+    ~/.config/ghostty:
+        create: true
+        path: shell/ghostty
+
 # ZSH
 # install oh my zsh if its not already present.
 # this will not change the shell automatically. shell change is handled in another config intended to be run with root access.
