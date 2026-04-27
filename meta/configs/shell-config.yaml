@@ -1,6 +1,7 @@
 # BASH
 - link:
     ~/.bashrc: shell/bash/bashrc
+    ~/.profile: shell/bash/profile
 
 # GIT
 - link:
@@ -47,3 +48,4 @@
 - link:
     ~/.zshrc: shell/zsh/zshrc
     ~/.p10k.zsh: shell/zsh/p10k.zsh
+    ~/.zprofile: shell/zsh/zprofile
