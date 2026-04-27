@@ -10,7 +10,7 @@
     - PATH=$PATH:$HOME/.local/bin uv tool install mdformat
     - PATH=$PATH:$HOME/.local/bin uv tool install clang-format
     - PATH=$PATH:$HOME/.local/bin uv tool install clangd
-    - PATH=$PATH:$HOME/.local/bin uv tool install clangd
+    - PATH=$PATH:$HOME/.local/bin uv tool install cmake
 
 - shell:
     - PATH=$PATH:/usr/local/go/bin go install mvdan.cc/sh/v3/cmd/shfmt@latest
