@@ -14,6 +14,7 @@
 
 - link:
     ~/.tmux.conf: shell/tmux/tmux.conf
+    ~/.tmux.ssh.conf: shell/tmux/tmux.ssh.conf
 
 - link:
     ~/.config/ghostty:

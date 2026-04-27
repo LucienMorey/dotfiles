@@ -79,15 +79,27 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting)
 
+# Tmux autostart — set vars before oh-my-zsh loads the tmux plugin
 ZSH_TMUX_FIXTERM=true
+ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_AUTOCONNECT=false
 
-# Only autostart tmux in real local terminals outside of VSCode
-if [[ -t 1 && -z "$SSH_TTY" && "$TERM_PROGRAM" != "vscode" ]]; then
+# Conditions to NOT autostart:
+#   - already inside tmux
+#   - inside VSCode terminal
+#   - inside an SSH session
+#   - not an interactive TTY (check stdin fd 0, more reliable than fd 1)
+
+if [[ -z "$TMUX" && \
+      -z "$SSH_CONNECTION" && \
+      "$TERM_PROGRAM" != "vscode" && \
+      -t 0 ]]; then
     ZSH_TMUX_AUTOSTART=true
     ZSH_TMUX_AUTOCONNECT=true
-else
-    ZSH_TMUX_AUTOSTART=false
-    ZSH_TMUX_AUTOCONNECT=false
+fi
+
+if [[ -n "$SSH_CONNECTION" ]]; then
+    alias tmux='tmux -L ssh -f ~/.tmux.ssh.conf'
 fi
 
 source $ZSH/oh-my-zsh.sh
