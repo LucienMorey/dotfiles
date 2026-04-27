@@ -1,0 +1,336 @@
+{
+  "name": "LP Custom",
+  "type": "dark",
+  "$schema": "vscode://schemas/color-theme",
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "comment": "#546E7A",
+    // Language keywords and identifiers
+    "namespace": "#80CBC4",
+    "keyword": "#C792EA",
+    "type": "#FFCB6B",
+    "class": "#FFCB6B",
+    "struct": "#FFCB6B",
+    "enum": "#FFCB6B",
+    "variable.typeHint": "#FFCB6B",
+    // function like constructs
+    "macro": "#98AAD2",
+    "function": "#82AAFF",
+    "method": "#82AAFF",
+    "function.static": "#82AAFF",
+    "variable.decorator": "#98AAD2", // python decorators have this tag
+    "function.decorator": "#98AAD2",
+    // data mutable or read only
+    "enumMember.declaration": "#EEFFFF",
+    "property": "#89DDFF",
+    "variable.classMember": "#89DDFF",
+    "variable": "#EEFFFF",
+    "parameter": "#EEFFFF",
+    "parameter.readonly": "#B2CCD6",
+    "selfParameter": "#C792EA",
+    // Constants and literal colours
+    "string": "#C3E88D",
+    "number": "#F78C6C",
+    "enumMember": "#F78C6C",
+    "variable.readonly": "#F78C6C"
+  },
+  "colors": {
+    // Reference spec -> going off ocenanic https://material-theme.com/docs/reference/color-palette/
+    // API -> https://code.visualstudio.com/api/references/theme-color
+    // One attempt at doing the things -> https://github.com/vihuvac/material-theme-for-vscode
+    // Another attempt at doing the things/also the source of what I was using -> https://github.com/t3dotgg/vsc-material-but-i-wont-sue-you 
+    // primary Combination Pallete
+    // bg: #263238
+    // fg: #EEFFFF <- modified from #B0BEC5
+    // Contrast Pallete
+    // bg: #1E272C
+    // fg: #B0BEC5
+    // ======================================================
+    // Base / Global UI (HYBRID) likely to be overwritten in context
+    // ======================================================
+    "focusBorder": "#FFFFFF00",
+    "foreground": "#EEFFFF", // PRIMARY FG (global default)
+    "widget.shadow": "#00000030",
+    "scrollbar.shadow": "#00000000",
+    "selection.background": "#00000080",
+    "sash.hoverBorder": "#80CBC450",
+    "scrollbarSlider.background": "#EEFFFF10",
+    "scrollbarSlider.hoverBackground": "#EEFFFF20",
+    // ======================================================
+    // Editor — Core Reading Surface (PRIMARY)
+    // ======================================================
+    "editor.background": "#263238", // PRIMARY BG
+    "editor.foreground": "#EEFFFF", // PRIMARY FG
+    "editor.lineHighlightBackground": "#1E272C", // CONTRAST BG used as subtle stripe
+    "editorCursor.foreground": "#FFCC00",
+    "editorWhitespace.foreground": "#EEFFFF40",
+    "editorRuler.foreground": "#37474F",
+    // Selections & ranges (OVERLAY on PRIMARY)
+    "editor.selectionBackground": "#80CBC420",
+    "editor.selectionHighlightBackground": "#FFCC0020",
+    "editor.rangeHighlightBackground": "#FFFFFF0D",
+    "editor.wordHighlightBackground": "#ff9cac30",
+    "editor.wordHighlightStrongBackground": "#c3e88d30",
+    // Find & match (OVERLAY)
+    "editor.findMatchBackground": "#000000",
+    "editor.findMatchBorder": "#80CBC4",
+    "editor.findMatchHighlightBackground": "#00000050",
+    "editor.findMatchHighlightBorder": "#FFFFFF30",
+    "editor.findRangeHighlightBackground": "#FFCB6B30",
+    // Brackets (PRIMARY + ACCENT)
+    "editorBracketMatch.background": "#263238",
+    "editorBracketMatch.border": "#FFCC005F",
+    // Diagnostics (ACCENT overlays)
+    "editorInfo.foreground": "#82AAFF90",
+    "editorWarning.foreground": "#FFCB6B90",
+    "editorError.foreground": "#F0717890",
+    "editorLink.activeForeground": "#EEFFFF",
+    // ======================================================
+    // Editor Widgets & Decorations (PRIMARY)
+    // ======================================================
+    "editorWidget.background": "#263238",
+    "editorWidget.border": "#80CBC4",
+    "editorWidget.resizeBorder": "#80CBC4",
+    // info hover widget
+    "editorHoverWidget.background": "#263238",
+    // Classic autocomplete widget
+    "editorSuggestWidget.background": "#263238",
+    "editorSuggestWidget.foreground": "#EEFFFF",
+    "editorSuggestWidget.highlightForeground": "#80CBC4",
+    "editorSuggestWidget.selectedBackground": "#00000050",
+    // Marker / problem navigation (OVERLAY)
+    "editorMarkerNavigation.background": "#EEFFFF05",
+    // ======================================================
+    // Editor Groups & Overview (HYBRID)
+    // ======================================================
+    "editorGroup.border": "#00000030",
+    "editorGroup.dropBackground": "#F0717880",
+    "editorGroup.focusedEmptyBorder": "#F07178",
+    "editorGroup.emptyBackground": "#263238", // PRIMARY BG
+    // happy to blend in but information colours could be a little brighter
+    "editorOverviewRuler.border": "#263238",
+    "editorOverviewRuler.errorForeground": "#F0717840",
+    "editorOverviewRuler.warningForeground": "#FFCB6B40",
+    "editorOverviewRuler.infoForeground": "#82AAFF40",
+    "editorOverviewRuler.findMatchForeground": "#80CBC4",
+    // ======================================================
+    // Diff Editor (OVERLAY)
+    // ======================================================
+    "diffEditor.insertedTextBackground": "#89DDFF20",
+    "diffEditor.removedTextBackground": "#FF9CAC20",
+    // ======================================================
+    // Gutter & Line Numbers (PRIMARY canvas edge)
+    // ======================================================
+    "editorGutter.background": "#263238",
+    "editorLineNumber.foreground": "#465A64",
+    "editorLineNumber.activeForeground": "#6C8692",
+    "editorGutter.addedBackground": "#C4E88D8E",
+    "editorGutter.modifiedBackground": "#82AAFF86",
+    "editorGutter.deletedBackground": "#F071778E",
+    // ======================================================
+    // Git / SCM Decorations (ACCENT overlays) - match the gutter for easy life
+    // ======================================================
+    "gitDecoration.conflictingResourceForeground": "#FFCB6B90",
+    "gitDecoration.deletedResourceForeground": "#F0717890",
+    "gitDecoration.ignoredResourceForeground": "#6C869290",
+    "gitDecoration.modifiedResourceForeground": "#82AAFF86",
+    "gitDecoration.untrackedResourceForeground": "#C3E88D90",
+    // ======================================================
+    // Peek View (PRIMARY surface in temporary container)
+    // ======================================================
+    "peekView.border": "#00000030",
+    "peekViewEditor.background": "#303C41", // Derived PRIMARY
+    "peekViewEditorGutter.background": "#303C41",
+    "peekViewEditor.matchHighlightBackground": "#80CBC420",
+    "peekViewResult.background": "#303C41",
+    "peekViewResult.matchHighlightBackground": "#80CBC420",
+    "peekViewResult.selectionBackground": "#6C869270",
+    "peekViewTitle.background": "#303C41",
+    "peekViewTitleDescription.foreground": "#EEFFFF60",
+    // ======================================================
+    // Lists & Trees (Mostly CONTRAST containers) - primarily impacts file list in sidebar
+    // ======================================================
+    "list.activeSelectionBackground": "#263238", // PRIMARY inside CONTRAST
+    "list.activeSelectionForeground": "#80CBC4",
+    "list.inactiveSelectionBackground": "#263238",
+    "list.inactiveSelectionForeground": "#80CBC4",
+    "list.hoverBackground": "#32424A",
+    "list.hoverForeground": "#EEFFFF",
+    "list.focusBackground": "#EEFFFF20",
+    "list.focusForeground": "#EEFFFF",
+    "list.highlightForeground": "#80CBC4",
+    "list.dropBackground": "#F0717880",
+    "listFilterWidget.background": "#00000030",
+    "listFilterWidget.outline": "#00000030",
+    "listFilterWidget.noMatchesOutline": "#00000030",
+    "tree.indentGuidesStroke": "#303C41",
+    // ======================================================
+    // Side Bar (CONTRAST)
+    // ======================================================
+    "sideBar.background": "#1E272C",
+    "sideBar.foreground": "#B0BEC5",
+    "sideBar.border": "#37474F",
+    "sideBarTitle.foreground": "#B0BEC5",
+    "sideBarSectionHeader.background": "#1E272C", // PRIMARY block inside CONTRAST
+    "sideBarSectionHeader.border": "#37474F",
+    // ======================================================
+    // Activity Bar (CONTRAST)
+    // ======================================================
+    "activityBar.background": "#1E272C",
+    "activityBar.foreground": "#B0BEC5",
+    "activityBar.border": "#37474F",
+    "activityBar.activeBorder": "#80CBC4",
+    "activityBarBadge.background": "#80CBC4",
+    "activityBarBadge.foreground": "#000000",
+    // ======================================================
+    // Tabs & Editor Header
+    // ======================================================
+    // Active = PRIMARY (content)
+    "tab.activeBackground": "#263238",
+    "tab.activeForeground": "#EEFFFF",
+    "tab.activeBorder": "#80CBC4",
+    "tab.activeModifiedBorder": "#6C8692",
+    // Inactive = CONTRAST (navigation)
+    "tab.inactiveBackground": "#1E272C",
+    "tab.inactiveForeground": "#B0BEC5",
+    "tab.inactiveModifiedBorder": "#904348",
+    "tab.unfocusedActiveForeground": "#EEFFFF",
+    "tab.unfocusedActiveBorder": "#546E7A",
+    "tab.unfocusedActiveModifiedBorder": "#C05A60",
+    "tab.unfocusedInactiveModifiedBorder": "#904348",
+    "tab.hoverBackground": "#2E353B",
+    "tab.hoverForeground": "#FFFFFF",
+    "tab.border": "#263238",
+    "editorGroupHeader.tabsBackground": "#1E272C", // CONTRAST frame
+    // ======================================================
+    // Panels (PRIMARY content containers) - host for terminal,output etc
+    // ======================================================
+    "panel.background": "#263238",
+    "panel.border": "#37474F",
+    "panelTitle.activeBorder": "#80CBC4",
+    "panelTitle.activeForeground": "#FFFFFF",
+    "panelTitle.inactiveForeground": "#B0BEC5",
+    // ======================================================
+    // Debug (PRIMARY)
+    // ======================================================
+    "debugToolBar.background": "#263238", // popup for debug interaction that appears in editor space
+    "debugConsole.errorForeground": "#F07178",
+    "debugConsole.warningForeground": "#FFCB6B",
+    "debugConsole.infoForeground": "#89DDFF",
+    // ======================================================
+    // Status Bar (CONTRAST)
+    // ======================================================
+    "statusBar.background": "#1E272C",
+    "statusBar.foreground": "#B0BEC5",
+    "statusBar.border": "#37474F",
+    "statusBar.noFolderBackground": "#1E272C",
+    "statusBar.debuggingBackground": "#FF5370",
+    "statusBarItem.activeBackground": "#F0717880",
+    "statusBarItem.hoverBackground": "#546E7A20",
+    "statusBarItem.remoteBackground": "#80CBC4",
+    "statusBarItem.remoteForeground": "#000000",
+    // ======================================================
+    // Title Bar & Menus (CONTRAST chrome) - Top Bar & context or otherwise (right click and top bar file, etc)
+    // ======================================================
+    "titleBar.activeBackground": "#1E272C",
+    "titleBar.inactiveBackground": "#1E272C",
+    "titleBar.activeForeground": "#EEFFFF", // elevated FG
+    "titleBar.inactiveForeground": "#B2CCD6",
+    "titleBar.border": "#1E272C60",
+    "menubar.selectionBackground": "#00000030",
+    "menubar.selectionBorder": "#00000030",
+    "menubar.selectionForeground": "#80CBC4",
+    "menu.background": "#1E272C", // Contrast popup
+    "menu.foreground": "#EEFFFF",
+    "menu.selectionBackground": "#37474F",
+    "menu.selectionForeground": "#FFFFFF",
+    "menu.selectionBorder": "#00000030",
+    "menu.separatorBackground": "#37474F",
+    // ======================================================
+    // Inputs, Buttons & Dropdowns (PRIMARY surfaces)
+    // ======================================================
+    // Most buttons that are not otherwise overwritten
+    "button.background": "#80CBC420",
+    "button.foreground": "#FFFFFF",
+    // Text box inputs like search bards and similar
+    "input.background": "#303C41",
+    "input.foreground": "#EEFFFF",
+    "input.border": "#FFFFFF10",
+    "input.placeholderForeground": "#EEFFFF60",
+    "inputOption.activeBackground": "#EEFFFF30",
+    "inputOption.activeBorder": "#EEFFFF30",
+    "inputValidation.errorBorder": "#F07178",
+    "inputValidation.warningBorder": "#FFCB6B",
+    "inputValidation.infoBorder": "#82AAFF",
+    "dropdown.background": "#263238",
+    "dropdown.border": "#FFFFFF10",
+    "progressBar.background": "#80CBC4",
+    // ======================================================
+    // Quick Pick / Command Palette (PRIMARY) - something is overriding part of this
+    // ======================================================
+    "quickInput.background": "#263238",
+    "quickInput.foreground": "#EEFFFF",
+    "pickerGroup.border": "#FFFFFF1A",
+    "pickerGroup.foreground": "#80CBC4",
+    // ======================================================
+    // Notifications & Badges
+    // ======================================================
+    "notifications.background": "#263238",
+    "notifications.foreground": "#EEFFFF",
+    "notificationLink.foreground": "#80CBC4",
+    // badge bubbles (like search result counter) but not notifications
+    "badge.background": "#00000030",
+    "badge.foreground": "#EEFFFF",
+    // ======================================================
+    // Settings UI (PRIMARY)
+    // ======================================================
+    "settings.headerForeground": "#80CBC4",
+    "settings.modifiedItemIndicator": "#80CBC4",
+    "settings.checkboxBackground": "#263238",
+    "settings.checkboxForeground": "#EEFFFF",
+    "settings.dropdownBackground": "#263238",
+    "settings.dropdownForeground": "#EEFFFF",
+    "settings.numberInputBackground": "#263238",
+    "settings.numberInputForeground": "#EEFFFF",
+    "settings.textInputBackground": "#263238",
+    "settings.textInputForeground": "#EEFFFF",
+    // ======================================================
+    // Extensions UI (PRIMARY + ACCENT)
+    // ======================================================
+    "extensionBadge.remoteForeground": "#EEFFFF",
+    "extensionButton.prominentBackground": "#C3E88D90",
+    "extensionButton.prominentForeground": "#EEFFFF",
+    "extensionButton.prominentHoverBackground": "#C3E88D",
+    // ======================================================
+    // Notebooks (PRIMARY focus accents)
+    // ======================================================
+    "notebook.focusedCellBorder": "#80CBC4",
+    "notebook.inactiveFocusedCellBorder": "#80CBC450",
+    // ======================================================
+    // Links hyperlinks deployed throughout the editor. Not all elements have an active foreground
+    // ======================================================
+    "textLink.foreground": "#80CBC4",
+    "textLink.activeForeground": "#EEFFFF",
+    // ======================================================
+    // Terminal (PRIMARY content)
+    // ======================================================
+    "terminalCursor.background": "#000000",
+    "terminalCursor.foreground": "#FFCB6B",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiRed": "#EE2A29",
+    "terminal.ansiGreen": "#3FA33F",
+    "terminal.ansiYellow": "#FEE92E",
+    "terminal.ansiBlue": "#1D80EF",
+    "terminal.ansiMagenta": "#8800A0",
+    "terminal.ansiCyan": "#16AEC9",
+    "terminal.ansiWhite": "#A4A4A4",
+    "terminal.ansiBrightBlack": "#767676",
+    "terminal.ansiBrightRed": "#DC5B60",
+    "terminal.ansiBrightGreen": "#70BE71",
+    "terminal.ansiBrightYellow": "#FEF063",
+    "terminal.ansiBrightBlue": "#53A4F3",
+    "terminal.ansiBrightMagenta": "#A94DBB",
+    "terminal.ansiBrightCyan": "#42C6D9",
+    "terminal.ansiBrightWhite": "#FFFEFE"
+  }
+}

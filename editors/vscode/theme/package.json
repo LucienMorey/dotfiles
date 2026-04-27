@@ -1,0 +1,22 @@
+{
+  "name": "lp-custom",
+  "displayName": "LP Custom",
+  "publisher": "local",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "LP Custom",
+        "uiTheme": "vs-dark",
+        "path": "./dist/lp-custom.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node build.js",
+    "vscode:prepublish": "node build.js"
+  }
+}

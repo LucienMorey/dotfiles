@@ -2,3 +2,6 @@
     ~/.config/nvim:
       create: true
       path: editors/nvim
+    ~/.vscode/extensions/lp-custom:
+        create: true
+        path: editors/vscode/theme
